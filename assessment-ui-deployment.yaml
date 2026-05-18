@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: assessment-ui
+  namespace: {{ .Values.services.assessmentUi.namespace }}
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: assessment-ui
+
+  template:
+    metadata:
+      labels:
+        app: assessment-ui
+
+    spec:
+      containers:
+      - name: assessment-ui
+        image: {{ .Values.services.assessmentUi.repo }}:{{ .Values.services.assessmentUi.tag }}
