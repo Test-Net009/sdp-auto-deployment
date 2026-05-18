@@ -1,0 +1,6 @@
+services:
+
+   assessmentUi:
+    namespace: assessment-ui
+    repo: 406250959263.dkr.ecr.ap-south-1.amazonaws.com/sdp-assessment-ui
+    tag: release-v3.0.0-production_onprem-70-202605131720296
